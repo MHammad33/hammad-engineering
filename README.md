@@ -1,8 +1,17 @@
-![Compass. Understand. Design. Build. Verify.](assets/hero.png)
+<p align="center">
+  <img src="assets/hero.png" alt="Compass. Understand. Design. Build. Verify." width="100%">
+</p>
 
-# Compass
+<h1 align="center">Compass</h1>
 
-**Understand. Design. Build. Verify.**
+<p align="center"><strong>Understand. Design. Build. Verify.</strong></p>
+
+<p align="center">
+  <a href="#why">Why</a> ·
+  <a href="#install">Install</a> ·
+  <a href="#choose-a-skill">Choose a skill</a> ·
+  <a href="#guides">Guides</a>
+</p>
 
 A small set of skills for coding agents. Use it when you do not know what to do next.
 
