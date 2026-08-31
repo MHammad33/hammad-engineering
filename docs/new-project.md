@@ -176,7 +176,7 @@ You are in normal project mode. Use [Choosing a skill](choosing-a-skill.md) for 
 
 ```text
 IDEA
- → Compass → this guide
+ → Engineering Compass → this guide
  → PROJECT.md (local, then first commit)
  → create repo
  → install skills

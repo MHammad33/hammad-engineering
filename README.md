@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="Idea to done: understand, design, plan, build, test, review" width="800">
+<img src="assets/hero.svg" alt="Engineering Compass. Understand. Design. Build. Verify." width="800">
 
-# Compass
+# Engineering Compass
 
 **Understand. Design. Build. Verify.**
 
@@ -14,7 +14,7 @@ A small set of skills for coding agents. Use it when you do not know what to do 
 
 ## Why
 
-Agents need a clear outcome, the constraints that matter, and proof that the work is done. Compass turns that into eight focused skills.
+Agents need a clear outcome, the constraints that matter, and proof that the work is done. Engineering Compass turns that into eight focused skills.
 
 ## Install
 
@@ -59,4 +59,4 @@ New repos copy [templates/PROJECT.md](templates/PROJECT.md) then [templates/proj
 
 ## Project
 
-Compass is a workflow, not an issue tracker, agent runtime, or stack cookbook. It is tool-neutral. Keep project facts in each project's `PROJECT.md` and `AGENTS.md`.
+Engineering Compass is a workflow, not an issue tracker, agent runtime, or stack cookbook. It is tool-neutral. Keep project facts in each project's `PROJECT.md` and `AGENTS.md`.

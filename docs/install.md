@@ -46,7 +46,7 @@ Run update after pulling changes from this repository.
 2. Skills are loaded from the skills directory configured by the `skills` CLI.
 3. Invoke by name in chat: `Use the design skill. ...`
 4. Keep project-specific rules in the project repo (`AGENTS.md`, `.cursor/rules/` if you use them).
-5. Keep Compass workflow rules in this repository, not in Cursor settings, when possible.
+5. Keep Engineering Compass workflow rules in this repository, not in Cursor settings, when possible.
 
 ## Other tools
 

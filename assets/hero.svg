@@ -1,36 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200">
-  <rect width="1200" height="200" rx="16" fill="#F7F4EE"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280">
+  <rect width="1200" height="280" rx="16" fill="#F7F4EE"/>
+  <text x="600" y="64" text-anchor="middle" fill="#1B2A4A" font-family="Georgia, Times New Roman, serif" font-size="42" font-weight="700">Engineering Compass</text>
+  <text x="600" y="102" text-anchor="middle" fill="#5C6578" font-family="Arial, Helvetica, sans-serif" font-size="18">Understand. Design. Build. Verify.</text>
   <g font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" text-anchor="middle">
-    <rect x="36" y="78" width="96" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="84" y="105" fill="#1B2A4A">IDEA</text>
-    <text x="148" y="105" fill="#1B2A4A" font-size="16">?</text>
+    <rect x="36" y="148" width="96" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="84" y="175" fill="#1B2A4A">IDEA</text>
+    <text x="148" y="175" fill="#1B2A4A" font-size="18">&gt;</text>
 
-    <rect x="164" y="78" width="128" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="228" y="105" fill="#1B2A4A">UNDERSTAND</text>
-    <text x="308" y="105" fill="#1B2A4A" font-size="16">?</text>
+    <rect x="164" y="148" width="128" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="228" y="175" fill="#1B2A4A">UNDERSTAND</text>
+    <text x="308" y="175" fill="#1B2A4A" font-size="18">&gt;</text>
 
-    <rect x="324" y="78" width="100" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="374" y="105" fill="#1B2A4A">DESIGN</text>
-    <text x="440" y="105" fill="#1B2A4A" font-size="16">?</text>
+    <rect x="324" y="148" width="100" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="374" y="175" fill="#1B2A4A">DESIGN</text>
+    <text x="440" y="175" fill="#1B2A4A" font-size="18">&gt;</text>
 
-    <rect x="456" y="78" width="84" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="498" y="105" fill="#1B2A4A">PLAN</text>
-    <text x="556" y="105" fill="#1B2A4A" font-size="16">?</text>
+    <rect x="456" y="148" width="84" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="498" y="175" fill="#1B2A4A">PLAN</text>
+    <text x="556" y="175" fill="#1B2A4A" font-size="18">&gt;</text>
 
-    <rect x="572" y="78" width="88" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="616" y="105" fill="#1B2A4A">BUILD</text>
-    <text x="676" y="105" fill="#1B2A4A" font-size="16">?</text>
+    <rect x="572" y="148" width="88" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="616" y="175" fill="#1B2A4A">BUILD</text>
+    <text x="676" y="175" fill="#1B2A4A" font-size="18">&gt;</text>
 
-    <rect x="692" y="78" width="84" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="734" y="105" fill="#1B2A4A">TEST</text>
-    <text x="792" y="105" fill="#1B2A4A" font-size="16">?</text>
+    <rect x="692" y="148" width="84" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="734" y="175" fill="#1B2A4A">TEST</text>
+    <text x="792" y="175" fill="#1B2A4A" font-size="18">&gt;</text>
 
-    <rect x="808" y="78" width="100" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="858" y="105" fill="#1B2A4A">REVIEW</text>
-    <text x="924" y="105" fill="#1B2A4A" font-size="16">?</text>
+    <rect x="808" y="148" width="100" height="44" rx="22" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="858" y="175" fill="#1B2A4A">REVIEW</text>
+    <text x="924" y="175" fill="#1B2A4A" font-size="18">&gt;</text>
 
-    <rect x="940" y="78" width="88" height="44" rx="22" fill="#D8E8D4" stroke="#1B2A4A" stroke-width="2"/>
-    <text x="984" y="105" fill="#1B2A4A">DONE</text>
+    <rect x="940" y="148" width="88" height="44" rx="22" fill="#D8E8D4" stroke="#1B2A4A" stroke-width="2"/>
+    <text x="984" y="175" fill="#1B2A4A">DONE</text>
   </g>
-  <text x="600" y="158" text-anchor="middle" fill="#5C6578" font-family="Arial, Helvetica, sans-serif" font-size="13">Skip any step that does not help the work.</text>
+  <text x="600" y="232" text-anchor="middle" fill="#5C6578" font-family="Arial, Helvetica, sans-serif" font-size="13">Skip any step that does not help the work.</text>
 </svg>
