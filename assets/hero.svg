@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="hammad-engineering. Understand. Design. Build. Verify.">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="16" fill="url(#bg)"/>
+  <text x="600" y="72" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI, system-ui, sans-serif" font-size="42" font-weight="700">hammad-engineering</text>
+  <text x="600" y="118" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="500">Understand · Design · Build · Verify</text>
+  <g fill="none" stroke="#38bdf8" stroke-width="2" font-family="Segoe UI, system-ui, sans-serif">
+    <rect x="80" y="170" width="110" height="44" rx="8" fill="#0ea5e91a"/>
+    <rect x="230" y="170" width="120" height="44" rx="8" fill="#0ea5e91a"/>
+    <rect x="390" y="170" width="90" height="44" rx="8" fill="#0ea5e91a"/>
+    <rect x="520" y="170" width="70" height="44" rx="8" fill="#0ea5e91a"/>
+    <rect x="630" y="170" width="80" height="44" rx="8" fill="#0ea5e91a"/>
+    <rect x="750" y="170" width="70" height="44" rx="8" fill="#0ea5e91a"/>
+    <rect x="860" y="170" width="80" height="44" rx="8" fill="#0ea5e91a"/>
+    <rect x="980" y="170" width="70" height="44" rx="8" fill="#22c55e33" stroke="#22c55e"/>
+    <path d="M190 192 H230 M350 192 H390 M480 192 H520 M590 192 H630 M710 192 H750 M820 192 H860 M940 192 H980" stroke="#64748b"/>
+  </g>
+  <g fill="#e2e8f0" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+    <text x="135" y="197">IDEA</text>
+    <text x="290" y="197">UNDERSTAND</text>
+    <text x="435" y="197">DESIGN</text>
+    <text x="555" y="197">PLAN</text>
+    <text x="670" y="197">BUILD</text>
+    <text x="785" y="197">TEST</text>
+    <text x="900" y="197">REVIEW</text>
+    <text x="1015" y="197">DONE</text>
+  </g>
+  <text x="600" y="268" text-anchor="middle" fill="#64748b" font-family="Segoe UI, system-ui, sans-serif" font-size="14">Skip steps that add no value. Use only what the work needs.</text>
+</svg>
