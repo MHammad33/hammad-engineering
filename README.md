@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="Engineering Compass. Understand. Design. Build. Verify." width="800">
+<img src="assets/hero.png" alt="Engineering Compass. Understand. Design. Build. Verify." width="800">
 
 # Engineering Compass
 
