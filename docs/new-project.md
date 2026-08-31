@@ -168,7 +168,7 @@ v1 behavior works and is verified.
 
 **Next**
 
-You are in normal project mode. Use the [README skill table](../README.md#i-have-x--start-here) for day-to-day work.
+You are in normal project mode. Use [Choosing a skill](choosing-a-skill.md) for day-to-day work.
 
 ---
 

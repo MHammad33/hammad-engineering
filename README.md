@@ -1,157 +1,70 @@
+![hammad-engineering. Understand. Design. Build. Verify.](assets/hero.svg)
+
 # hammad-engineering
 
-Your personal AI engineering workflow. Tool-neutral. Use it to know **what to do next** when working with coding agents.
+**Understand. Design. Build. Verify.**
 
-## What is this?
+[Why](#why) · [Install](#install) · [New project](docs/new-project.md) · [Choose a skill](#choose-a-skill) · [Guides](#guides)
 
-A small set of skills and guides that turn recurring decisions into a clear path:
+hammad-engineering is your personal AI engineering workflow. Tool-neutral skills and guides that tell you what to do next when working with coding agents.
 
-```text
-IDEA
- ↓
-UNDERSTAND
- ↓
-DESIGN
- ↓
-PLAN
- ↓
-BUILD
- ↓
-TEST
- ↓
-REVIEW
- ↓
-DONE
-```
+## Why
 
-Not every task uses every step. Small bugs skip design. Trivial fixes skip review. The agent should match process to the work.
+Capable agents do not need a script for every move. They need a clear outcome, the constraints that matter, and proof that the work is done.
 
-## Why do I have it?
+This repository turns that into a small set of skills: understand the code, decide before expensive changes, build the smallest complete change, verify the result, and review when it matters. Use only the steps the work needs.
 
-To remove decision fatigue. Instead of guessing what to ask the agent next, open this repo, pick a starting skill, and follow the handoff.
+The goal is to remove decision fatigue. Open this repo, pick a starting skill, and follow the handoff.
 
-## What should I do first?
+## Install
 
-| Situation | Start here |
-| --- | --- |
-| **New project from an idea** | [docs/new-project.md](docs/new-project.md) |
-| **New machine or reinstall skills** | [docs/install.md](docs/install.md) |
-| **Working on an existing project** | [I have X — start here](#i-have-x--start-here) below |
-| **Want a full worked example** | [docs/workflows.md](docs/workflows.md) |
-
-## Install skills
+Install all skills with one command:
 
 ```bash
 npx skills add MHammad33/hammad-engineering
 ```
 
-Details, verify steps, and tool setup: [docs/install.md](docs/install.md).
+That is the main installation path. Skills are portable files, so the same repository works across compatible coding agents without a separate framework.
 
----
+Verify, update, and tool-specific setup: [docs/install.md](docs/install.md).
 
-## I have X — start here
+## Choose a skill
 
-| Situation | Start skill | Typical path |
-| --- | --- | --- |
-| I have a new idea | — | [new-project.md](docs/new-project.md) |
-| I need to explore code first | `understand` | understand → design or build |
-| I need to design a feature | `design` | design → **approve** → plan or build |
-| Design is approved | `plan` or `build` | plan → build → test **or** build → test |
-| I know what to build | `build` | build → test |
-| Something is broken | `debug` | debug → build → test |
-| Production is failing | `debug` | debug → **approve fix** → build → test |
-| I changed code | `test` | test → review (if non-trivial) |
-| I want another pair of eyes | `review` | review → build (if fixes needed) |
-| Code works but feels messy | `improve` | improve → test |
+Most work starts in one of these places:
 
-**Invoke a skill by name:**
+- **Start a new project.** Follow [docs/new-project.md](docs/new-project.md). Copy [templates/PROJECT.md](templates/PROJECT.md) before creating the repo.
+- **Decide how a meaningful change should work.** Use [`design`](skills/design/SKILL.md) for a technical design ready for your approval.
+- **Something is broken.** Use [`debug`](skills/debug/SKILL.md) to find root cause before fixing.
 
-```text
-Use the debug skill. The add button does nothing when clicked.
-```
+Use [`plan`](skills/plan/SKILL.md) when approved work needs splitting. Use [`understand`](skills/understand/SKILL.md) when you need to read unfamiliar code first.
 
----
+Small, clear changes can go straight to [`build`](skills/build/SKILL.md). This workflow asks for only as much process as the work needs.
 
-## After each step
+Full skill lookup, handoffs, and skip rules: [Choosing a skill](docs/choosing-a-skill.md).
 
-| You just finished | Do this next |
-| --- | --- |
-| `understand` | **design** (choices exist) or **build** / **debug** (clear path) |
-| `design` | **Wait for your approval**, then **plan** or **build** |
-| `plan` | **build** task 1 → **test** |
-| `build` | **test** |
-| `test` (all pass, non-trivial) | **review** |
-| `debug` | **Approve fix**, then **build** → **test** |
-| `improve` | **test** |
-| `review` (fix required) | **build** → **test** → **review** again if needed |
+## Eight skills
 
----
+- **Learn:** [`understand`](skills/understand/SKILL.md)
+- **Decide:** [`design`](skills/design/SKILL.md), [`plan`](skills/plan/SKILL.md)
+- **Deliver:** [`build`](skills/build/SKILL.md)
+- **Check:** [`test`](skills/test/SKILL.md), [`review`](skills/review/SKILL.md), [`debug`](skills/debug/SKILL.md), [`improve`](skills/improve/SKILL.md)
 
-## When to skip a step
+Each skill owns one kind of work and has a clear stopping point. Repository policy stays in [`AGENTS.md`](AGENTS.md). Project-specific facts stay in each project's `PROJECT.md` and `AGENTS.md`.
 
-| Step | Skip when |
-| --- | --- |
-| understand | Exact change is obvious |
-| design | Constraints and scope are already in `PROJECT.md` or chat |
-| plan | Single-step work |
-| review | Trivial one-line fix |
-| debug | Cause and fix are obvious |
+## Guides
 
----
-
-## How to use this in a real project
-
-1. **New project:** follow [docs/new-project.md](docs/new-project.md). Copy [templates/PROJECT.md](templates/PROJECT.md) before creating the repo. Copy [templates/project-AGENTS.md](templates/project-AGENTS.md) after.
-2. **Existing project:** open this README, pick a skill, run it in the project repo.
-3. **Project artifacts stay in the project:** `PROJECT.md`, `AGENTS.md`, `docs/<feature>/design.md`.
-4. **This repo stays portable:** principles here, project facts in each project.
-
----
-
-## Typical workflow examples
-
-**Small bug**
-
-```text
-debug → build → test
-```
-
-**New feature**
-
-```text
-understand → design → approve → plan → build → test → review
-```
-
-**Messy working code**
-
-```text
-understand → improve → test
-```
-
-More examples: [docs/workflows.md](docs/workflows.md).
-
----
-
-## Skills
-
-| Skill | Purpose |
-| --- | --- |
-| [understand](skills/understand/SKILL.md) | Learn relevant code before changing it |
-| [design](skills/design/SKILL.md) | Decide what to build; wait for approval |
-| [plan](skills/plan/SKILL.md) | Split approved work into ordered tasks |
-| [build](skills/build/SKILL.md) | Implement the smallest complete change |
-| [test](skills/test/SKILL.md) | Verify with evidence |
-| [review](skills/review/SKILL.md) | Independent read-only review (subagent) |
-| [debug](skills/debug/SKILL.md) | Find root cause before fixing |
-| [improve](skills/improve/SKILL.md) | Simplify without changing behavior |
-
-Agent policy for all projects: [AGENTS.md](AGENTS.md).
-
----
+- [Choosing a skill](docs/choosing-a-skill.md) explains where each skill starts, stops, and what comes next.
+- [New project](docs/new-project.md) walks from idea to v1 step by step.
+- [Workflows](docs/workflows.md) shows how skills fit together for bugs, features, production issues, and refactors.
+- [Install](docs/install.md) covers install, verify, update, and tool setup.
 
 ## Templates
 
-| Template | Use |
-| --- | --- |
-| [templates/PROJECT.md](templates/PROJECT.md) | Project brief before or at repo creation |
-| [templates/project-AGENTS.md](templates/project-AGENTS.md) | Agent instructions per project |
+- [templates/PROJECT.md](templates/PROJECT.md) — project brief before or at repo creation
+- [templates/project-AGENTS.md](templates/project-AGENTS.md) — agent instructions per project
+
+## Project
+
+hammad-engineering is deliberately small. It is not an issue tracker, an agent runtime, or a stack cookbook. It gives you and your coding agents clear instructions for deciding, building, testing, and reviewing software.
+
+It is tool-neutral. Cursor, Codex, Claude Code, or another agent can load the same skills. Tool wiring lives in [docs/install.md](docs/install.md), not in the core workflow.

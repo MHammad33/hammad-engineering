@@ -1,6 +1,6 @@
 # Workflows
 
-Worked examples for common situations. For a quick lookup, use the [README skill table](../README.md#i-have-x--start-here).
+Worked examples for common situations. For a quick lookup, use [Choosing a skill](choosing-a-skill.md).
 
 Each example lists: situation, starting skill, path, and what done looks like.
 
