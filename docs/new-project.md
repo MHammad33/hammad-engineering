@@ -168,7 +168,7 @@ v1 behavior works and is verified.
 
 **Next**
 
-You are in normal project mode. Use [Choosing a skill](choosing-a-skill.md) for day-to-day work.
+You are in normal project mode. Use [Start here](../README.md#start-here) for the next situation (feature, debugging, improve).
 
 ---
 

@@ -1,6 +1,11 @@
 # Choosing a skill
 
-Use this page when you know your situation but not which skill to run. For worked examples, see [workflows.md](workflows.md).
+Use this page when you need a **skill name** or handoff. For the full workflow for a situation, open **Start here** on the [README](../README.md#start-here) instead:
+
+- [New project](new-project.md)
+- [New feature](new-feature.md)
+- [Debugging](debugging.md)
+- [Improve](improve.md)
 
 **Invoke any skill by name:**
 
@@ -10,20 +15,21 @@ Use the debug skill. The add button does nothing when clicked.
 
 ---
 
-## I have X — start here
+## I have X — which skill?
 
 | Situation | Start skill | Typical path |
 | --- | --- | --- |
 | I have a new idea | — | [new-project.md](new-project.md) |
+| I am adding a feature | — | [new-feature.md](new-feature.md) |
 | I need to explore code first | `understand` | understand → design or build |
 | I need to design a feature | `design` | design → **approve** → plan or build |
 | Design is approved | `plan` or `build` | plan → build → test **or** build → test |
 | I know what to build | `build` | build → test |
-| Something is broken | `debug` | debug → build → test |
-| Production is failing | `debug` | debug → **approve fix** → build → test |
+| Something is broken | `debug` | [debugging.md](debugging.md) |
+| Production is failing | `debug` | [debugging.md](debugging.md) |
 | I changed code | `test` | test → review (if non-trivial) |
 | I want another pair of eyes | `review` | review → build (if fixes needed) |
-| Code works but feels messy | `improve` | improve → test |
+| Code works but feels messy | `improve` | [improve.md](improve.md) |
 
 ---
 

@@ -1,6 +1,13 @@
 # Workflows
 
-Worked examples for common situations. For a quick lookup, use [Choosing a skill](choosing-a-skill.md).
+Short worked examples. For step-by-step guides, use **Start here**:
+
+- [New project](new-project.md)
+- [New feature](new-feature.md)
+- [Debugging](debugging.md)
+- [Improve](improve.md)
+
+Skill name lookup: [choosing-a-skill.md](choosing-a-skill.md).
 
 Each example lists: situation, starting skill, path, and what done looks like.
 

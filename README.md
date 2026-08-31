@@ -6,7 +6,7 @@
 
 **Understand. Design. Build. Verify.**
 
-[Why](#why) · [Install](#install) · [Choose a skill](#choose-a-skill) · [Guides](#guides)
+[Why](#why) · [Install](#install) · [Start here](#start-here) · [Guides](#guides)
 
 A small set of skills for coding agents. Use it when you do not know what to do next.
 
@@ -24,16 +24,18 @@ npx skills add MHammad33/hammad-engineering
 
 Setup and troubleshooting: [docs/install.md](docs/install.md)
 
-## Choose a skill
+## Start here
 
-| You need to… | Start with |
+| You need to… | Open |
 | --- | --- |
 | Start a new project | [New project](docs/new-project.md) |
-| Decide how a change should work | `design` |
-| Fix something that is broken | `debug` |
-| Implement a decided task | `build` |
+| Add a new feature | [New feature](docs/new-feature.md) |
+| Fix something broken | [Debugging](docs/debugging.md) |
+| Clean up working code | [Improve](docs/improve.md) |
 
-Small work can skip steps. Full lookup: [docs/choosing-a-skill.md](docs/choosing-a-skill.md)
+Each guide is a step-by-step workflow. Skills are the tools inside those steps.
+
+Skill name lookup: [docs/choosing-a-skill.md](docs/choosing-a-skill.md)
 
 ## Skills
 
@@ -50,10 +52,13 @@ Instructions live in [`skills/`](skills/). Agent policy lives in [`AGENTS.md`](A
 
 | Guide | Open when |
 | --- | --- |
-| [Choosing a skill](docs/choosing-a-skill.md) | You need the next skill |
-| [New project](docs/new-project.md) | You have an idea and no repo |
-| [Workflows](docs/workflows.md) | You want a worked example |
-| [Install](docs/install.md) | Skills are missing or outdated |
+| [New project](docs/new-project.md) | Idea, no repo yet |
+| [New feature](docs/new-feature.md) | Meaningful change in an existing project |
+| [Debugging](docs/debugging.md) | Something is broken |
+| [Improve](docs/improve.md) | Code works but is hard to maintain |
+| [Choosing a skill](docs/choosing-a-skill.md) | You need a skill name or handoff |
+| [Workflows](docs/workflows.md) | Short worked examples |
+| [Install](docs/install.md) | Skills missing or outdated |
 
 New repos copy [templates/PROJECT.md](templates/PROJECT.md) then [templates/project-AGENTS.md](templates/project-AGENTS.md).
 
