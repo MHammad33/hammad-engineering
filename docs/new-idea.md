@@ -31,15 +31,18 @@ Use the idea skill. Let's build a customer support agent for small e-commerce sh
 
 **What happens**
 
-The agent works through ideation questions and writes **`IDEA.md`** (use [`templates/IDEA.md`](../templates/IDEA.md)). It covers:
+The agent runs an **interactive ideation session** — not a one-shot write. Expect several rounds of focused questions before **`IDEA.md`** is written.
 
-- Why build this, and for whom
-- What the product is and how it works
-- Whether anyone might pay, and how
-- The smallest useful v1
-- When to stop (kill criteria)
+1. **Gap scan** — what is clear vs missing from your idea or brief
+2. **Grill** — 3–5 questions per turn until gaps close (user, v1, out-of-scope, done-when seeds, kill criteria, assumptions)
+3. **Readiness check** — all items must pass before the file is written
+4. **`IDEA.md`** — written once, using [`templates/IDEA.md`](../templates/IDEA.md)
+
+It covers: why build this and for whom, what the product is, v1 and out-of-scope, done-when seeds, kill criteria, and assumptions.
 
 It does **not** pick a tech stack, create a repo, or write code.
+
+To skip grilling and write from existing material, say explicitly: *skip grilling — write IDEA.md from what we have*.
 
 **Brief example output**
 
@@ -96,8 +99,8 @@ Step 3 only if **pursue**.
    - **Problem** ← Problem
    - **Users** ← Users
    - **v1 scope** ← Smallest useful version
-   - **Out of scope** ← everything not in v1
-   - **Done when** ← observable checks from How it works
+   - **Out of scope** ← Out of scope (v1)
+   - **Done when** ← Done when (seeds)
 3. Leave **Constraints** empty unless you already chose stack, auth, or hosting.
 
 **Result**

@@ -8,7 +8,7 @@ One-line description of what this might be.
 
 ## Motivation
 
-<!-- Why build this at all? -->
+<!-- Why build this at all? Separate user benefit from builder motivation. -->
 
 ## Problem
 
@@ -61,15 +61,33 @@ One-line description of what this might be.
 
 -
 
+## Out of scope (v1)
+
+<!-- Explicit exclusions. Do not duplicate v1 bullets. -->
+
+-
+
+## Done when (seeds)
+
+<!-- 3–5 observable checks for v1 — enough to write PROJECT.md "Done when". -->
+
+-
+
 ## Kill criteria
 
-<!-- When we stop. -->
+<!-- When we stop. Concrete conditions, not vibes. -->
+
+-
+
+## Assumptions
+
+<!-- Facts not confirmed by the human or brief. Mark clearly. -->
 
 -
 
 ## Decision
 
-<!-- pursue | pivot | kill -->
+<!-- pursue | pivot | kill — only after the idea skill readiness checklist passes -->
 
 **Decision:**
 
