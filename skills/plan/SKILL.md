@@ -36,10 +36,6 @@ An ordered task list in chat:
 ...
 ```
 
-## Stop when
-
-The task list is complete. No code is written.
-
 ## Human approval
 
 Optional. Recommended for large plans. Ask if task order or scope looks wrong.
