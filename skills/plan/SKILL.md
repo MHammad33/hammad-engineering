@@ -1,6 +1,6 @@
 ---
 name: plan
-description: "Split approved work into ordered, agent-ready tasks. Use after design approval when work needs more than one focused pass. Does not write code."
+description: "Split approved design into tasks by working result — one build pass each. Use when work spans multiple build sessions. Skip for single-pass work (use build) or unapproved design (use design). Does not write code."
 user-invocable: true
 argument-hint: "<approved design path or feature name>"
 ---
@@ -9,17 +9,7 @@ argument-hint: "<approved design path or feature name>"
 
 Turn approved design into tasks a fresh **build** agent can execute using only what design already decided. Split by working result, not by file or layer.
 
-## When to use
-
-- Approved **design** with multiple steps
-- Work that will span several agent sessions
-- Dependencies exist between pieces of work
-
-## When not to use
-
-- Single-step change with a clear path
-- No approved design or clear scope yet
-- Trivial task where planning adds no value
+Use **plan** only after **design** is approved and the work needs more than one **build** pass. If one **build** is enough, use **build** directly. If design is missing or still open, use **design** first.
 
 ## Steps
 
