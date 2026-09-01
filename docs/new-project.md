@@ -10,6 +10,8 @@ You do not need a repo yet.
 
 Open this guide from the [README](../README.md) when you are ready to turn a pursued idea into a project.
 
+Worked example (support agent, all steps): [workflows.md](workflows.md#own-product-from-vague-idea-full-walkthrough).
+
 For what clarity you gain at each stage—and where it lives—see [from-scratch.md](from-scratch.md).
 
 ---

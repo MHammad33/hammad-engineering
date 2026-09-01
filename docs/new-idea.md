@@ -120,3 +120,5 @@ Rough idea
 ```
 
 For what clarity you have at each stage after this, see [from-scratch.md](from-scratch.md).
+
+Full worked example (support agent, all 11 steps): [workflows.md](workflows.md#own-product-from-vague-idea-full-walkthrough).

@@ -62,6 +62,7 @@ Instructions live in [`skills/`](skills/). Agent policy lives in [`AGENTS.md`](A
 | [Improve](docs/improve.md) | Code works but is hard to maintain |
 | [Choosing a skill](docs/choosing-a-skill.md) | You need a skill name or handoff |
 | [Workflows](docs/workflows.md) | Short worked examples |
+| [Workflows — own product walkthrough](docs/workflows.md#own-product-from-vague-idea-full-walkthrough) | Full example from vague idea to v1 |
 | [Install](docs/install.md) | Skills missing or outdated |
 
 New repos copy [templates/PROJECT.md](templates/PROJECT.md) then [templates/project-AGENTS.md](templates/project-AGENTS.md).

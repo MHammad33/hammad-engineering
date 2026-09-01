@@ -2,6 +2,7 @@
 
 Short worked examples. For step-by-step guides, use **Start here**:
 
+- [New idea](new-idea.md)
 - [New project](new-project.md)
 - [New feature](new-feature.md)
 - [Debugging](debugging.md)
@@ -10,6 +11,170 @@ Short worked examples. For step-by-step guides, use **Start here**:
 Skill name lookup: [choosing-a-skill.md](choosing-a-skill.md).
 
 Each example lists: situation, starting skill, path, and what done looks like.
+
+---
+
+## Own product from vague idea (full walkthrough)
+
+**Situation**
+
+Hammad has a vague own-product idea: *"Let's build a customer support agent."* No repo, no stack, no clarity yet.
+
+**Start with**
+
+`idea` — see [new-idea.md](new-idea.md)
+
+**Path**
+
+```text
+idea → [pursue / pivot / kill] → PROJECT.md → repo → skills + AGENTS.md
+ → design → [approve] → scaffold → AGENTS.md update → build → test → review
+```
+
+**Guides**
+
+- Ideation: [new-idea.md](new-idea.md)
+- Project bootstrap: [new-project.md](new-project.md)
+- Clarity map: [from-scratch.md](from-scratch.md)
+
+### Step 1 — Run the idea skill
+
+**Prompt**
+
+```text
+Use the idea skill. Let's build a customer support agent.
+```
+
+**Output**
+
+`IDEA.md` locally. Agent proposes answers (marked as assumptions where needed) and recommends **pursue**, **pivot**, or **kill**.
+
+**Example `IDEA.md` highlights**
+
+| Section | Example content |
+| --- | --- |
+| User | Support agent at a small e-commerce shop (~10–50 orders/day) |
+| Problem | Tickets and order details live in different places |
+| Product | Inbox where each ticket shows linked order context |
+| Will someone pay? | Unknown — validate with shop-owner conversations |
+| v1 | Login, ticket list, ticket detail + order, mark resolved |
+| Decision | **pursue** — build a demo and talk to 5 shop owners |
+
+**Not yet:** repo, `PROJECT.md`, stack, code.
+
+### Step 2 — Review and decide
+
+Hammad reads `IDEA.md` and agrees: **pursue**.
+
+| Decision | Next |
+| --- | --- |
+| kill | Stop |
+| pivot | Re-run **idea** with a narrower scope |
+| pursue | Step 3 |
+
+### Step 3 — Write PROJECT.md
+
+Open [new-project.md](new-project.md) Step 1. Copy from `IDEA.md` into [`templates/PROJECT.md`](../templates/PROJECT.md).
+
+**Example `PROJECT.md` highlights**
+
+| Section | Example content |
+| --- | --- |
+| One-line | Support inbox for small e-commerce shops — tickets linked to order context |
+| Problem | Support agents switch between email and order systems; context gets lost |
+| Users | Support agent at a shop doing ~10–50 orders/day |
+| v1 scope | Login · ticket list · ticket detail with order info · mark resolved |
+| Out of scope | AI replies, Shopify integration, customer chat, billing |
+| Constraints | *(empty — stack not chosen)* |
+| Done when | Agent can log in, open a ticket, see order details, mark it resolved |
+
+**Not yet:** repo, code.
+
+### Step 4 — Create the repository
+
+Create GitHub repo `support-inbox`. First commit: `PROJECT.md` only.
+
+### Step 5 — Install skills
+
+```bash
+npx skills add MHammad33/hammad-engineering
+```
+
+Confirm `idea`, `design`, `build`, and other skills are available in the agent tool.
+
+### Step 6 — Add AGENTS.md
+
+Clone locally. Copy [`templates/project-AGENTS.md`](../templates/project-AGENTS.md) → `AGENTS.md`. Use `TBD` for stack and commands until after scaffold.
+
+### Step 7 — Design v1
+
+`PROJECT.md` **Constraints** is empty → run **design**.
+
+**Prompt**
+
+```text
+Use the design skill. Read PROJECT.md and propose a technical design for v1.
+```
+
+**Output**
+
+`docs/support-inbox/design.md` — e.g. Next.js + TypeScript + SQLite, simple auth, seeded fake tickets/orders, login → list → detail pages.
+
+**Not yet:** approved, scaffold, code.
+
+### Step 8 — Approve design
+
+Hammad reads the design and replies **approved**. No scaffold or build before this.
+
+### Step 9 — Scaffold
+
+**Prompt**
+
+```text
+Use the build skill. Scaffold the minimal app described in PROJECT.md and docs/support-inbox/design.md.
+```
+
+**Output**
+
+Runnable skeleton: app structure, dependencies, page shells, seed data. App starts locally.
+
+### Step 10 — Update AGENTS.md
+
+Replace `TBD` with real stack and commands (e.g. `npm run dev`, `npm test`, `npm run lint`). Commit.
+
+### Step 11 — Build, test, review v1
+
+**Prompts**
+
+```text
+Use the build skill. Implement v1 from PROJECT.md.
+```
+
+```text
+Use the test skill. Verify v1 against PROJECT.md Done when criteria.
+```
+
+```text
+Use the review skill.
+```
+
+Fix required review findings → **build** → **test** again.
+
+**Done when**
+
+- Agent can log in, see tickets, open ticket with order details, mark resolved
+- Tests pass or are honestly marked unverified
+- Review findings addressed or accepted
+
+**After v1**
+
+Normal project mode. Next change → [new-feature.md](new-feature.md).
+
+**Skip**
+
+- **design** — only if `PROJECT.md` **Constraints** already settles stack, auth, and hosting
+- **plan** — v1 fits one build pass
+- **idea** — if you already have **Decision: pursue** in `IDEA.md`
 
 ---
 
@@ -198,7 +363,3 @@ You said "add authentication" without naming a skill or scope.
 Use the README table and invoke a skill directly when you already know the path.
 
 ---
-
-## New project (full path)
-
-See [new-project.md](new-project.md) for the complete bootstrap sequence from idea to v1.
