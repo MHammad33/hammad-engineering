@@ -29,6 +29,7 @@ Setup and troubleshooting: [docs/install.md](docs/install.md)
 | You need to… | Open |
 | --- | --- |
 | Start a new project | [New project](docs/new-project.md) |
+| See what clarity you have at each stage | [From scratch](docs/from-scratch.md) |
 | Add a new feature | [New feature](docs/new-feature.md) |
 | Fix something broken | [Debugging](docs/debugging.md) |
 | Clean up working code | [Improve](docs/improve.md) |
@@ -53,6 +54,7 @@ Instructions live in [`skills/`](skills/). Agent policy lives in [`AGENTS.md`](A
 | Guide | Open when |
 | --- | --- |
 | [New project](docs/new-project.md) | Idea, no repo yet |
+| [From scratch](docs/from-scratch.md) | You want clarity on how the process works stage by stage |
 | [New feature](docs/new-feature.md) | Meaningful change in an existing project |
 | [Debugging](docs/debugging.md) | Something is broken |
 | [Improve](docs/improve.md) | Code works but is hard to maintain |

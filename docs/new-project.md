@@ -8,6 +8,8 @@ You need an idea. You do not need a repo yet.
 
 Open this guide from the [README](../README.md) when you are ready to turn the idea into a project.
 
+For what clarity you gain at each stage—and where it lives—see [from-scratch.md](from-scratch.md).
+
 ---
 
 ## Step 1 — Write PROJECT.md
