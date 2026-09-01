@@ -26,7 +26,7 @@ You do not log in anywhere. You read the guide, run skills in chat, and review a
 Each stage answers a different kind of question. Do not skip a rung unless the guide says you can.
 
 ```text
-Stage 0  IDEA           → What problem might we solve?
+Stage 0  IDEATE         → Should we build this? (IDEA.md)
 Stage 1  PROJECT.md     → What is v1, and what is not?
 Stage 2  REPO           → Where does the project live?
 Stage 3  SKILLS         → How do we work with agents?
@@ -41,25 +41,30 @@ After v1, clarity for new work follows [new-feature.md](new-feature.md): underst
 
 ---
 
-## Stage 0 — Idea (no repo)
+## Stage 0 — Ideate (no repo)
 
-**You have:** a vague idea, maybe a sentence or two.
+**You have:** a rough idea, maybe one sentence.
 
-**You lack:** scope, users, constraints, a definition of done, a place to put decisions.
+**You lack:** validated problem, user, value, money story, and a go/no-go decision.
 
-**What to do:** nothing in git yet. Talk it through or jot notes locally.
+**What to do:** follow [new-idea.md](new-idea.md). Run the **idea** skill. Write `IDEA.md`.
 
 **Clarity you gain:**
 
-| Question | Answered? |
+| Question | Answered in IDEA.md |
 | --- | --- |
-| What pain does this solve? | Roughly |
-| Who is it for? | Maybe |
-| What would "useful" look like? | Fuzzy |
+| What pain does this solve? | Problem |
+| Who is it for? | Users |
+| Why build this? | Motivation |
+| What exactly is the product? | Product, How it works |
+| Will anyone pay? | Money |
+| What is v1? | Smallest useful version |
+| Should we build this? | Decision (pursue / pivot / kill) |
+| When do we stop? | Kill criteria |
 
-**Artifact:** none required. Notes are fine.
+**Artifact:** `IDEA.md` (local, before any repo).
 
-**Ready for Stage 1 when:** you can name the problem in one sentence and describe a first version someone could use, even if details are still open.
+**Ready for Stage 1 when:** you agree with **Decision: pursue** in `IDEA.md`.
 
 ---
 
@@ -308,7 +313,7 @@ Use the test skill. Verify v1 against PROJECT.md "Done when" criteria.
 
 | Stage | Primary artifact | You can answer |
 | --- | --- | --- |
-| 0 Idea | (notes) | Why might this exist? |
+| 0 Ideate | `IDEA.md` | Should we build this? Why? For whom? |
 | 1 PROJECT.md | `PROJECT.md` | What is v1? What is not? When is it done? |
 | 2 Repo | git remote | Where does the project live? |
 | 3 Skills | installed skills | Which agent phase do I run next? |

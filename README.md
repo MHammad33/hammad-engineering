@@ -14,7 +14,7 @@ A small set of skills for coding agents. Use it when you do not know what to do 
 
 ## Why
 
-Agents need a clear outcome, the constraints that matter, and proof that the work is done. Engineering Compass turns that into eight focused skills.
+Agents need a clear outcome, the constraints that matter, and proof that the work is done. Engineering Compass turns that into nine focused skills.
 
 ## Install
 
@@ -28,6 +28,7 @@ Setup and troubleshooting: [docs/install.md](docs/install.md)
 
 | You need to… | Open |
 | --- | --- |
+| Challenge a new idea | [New idea](docs/new-idea.md) |
 | Start a new project | [New project](docs/new-project.md) |
 | See what clarity you have at each stage | [From scratch](docs/from-scratch.md) |
 | Add a new feature | [New feature](docs/new-feature.md) |
@@ -43,7 +44,7 @@ Skill name lookup: [docs/choosing-a-skill.md](docs/choosing-a-skill.md)
 | Group | Skills |
 | --- | --- |
 | Learn | `understand` |
-| Decide | `design` · `plan` |
+| Decide | `idea` · `design` · `plan` |
 | Deliver | `build` |
 | Check | `test` · `review` · `debug` · `improve` |
 
@@ -53,7 +54,8 @@ Instructions live in [`skills/`](skills/). Agent policy lives in [`AGENTS.md`](A
 
 | Guide | Open when |
 | --- | --- |
-| [New project](docs/new-project.md) | Idea, no repo yet |
+| [New idea](docs/new-idea.md) | Rough own-product idea, not validated yet |
+| [New project](docs/new-project.md) | Idea validated, ready for PROJECT.md and repo |
 | [From scratch](docs/from-scratch.md) | You want clarity on how the process works stage by stage |
 | [New feature](docs/new-feature.md) | Meaningful change in an existing project |
 | [Debugging](docs/debugging.md) | Something is broken |
