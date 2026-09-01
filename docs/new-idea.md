@@ -36,11 +36,13 @@ The agent runs an **interactive ideation session** — not a one-shot write. Exp
 1. **Gap scan** — what is clear vs missing from your idea or brief
 2. **Grill** — 3–5 questions per turn until gaps close (user, v1, out-of-scope, done-when seeds, kill criteria, assumptions)
 3. **Readiness check** — all items must pass before the file is written
-4. **`IDEA.md`** — written once, using [`templates/IDEA.md`](../templates/IDEA.md)
+4. **`IDEA.md`** — written once in your working folder (shape is defined inside the installed **idea** skill)
 
-It covers: why build this and for whom, what the product is, v1 and out-of-scope, done-when seeds, kill criteria, and assumptions.
+It covers: scenario, motivation, problem, users, product, alternatives, v1, out-of-scope, done-when seeds, kill criteria, assumptions, and decision.
 
-It does **not** pick a tech stack, create a repo, or write code.
+It does **not** pick a tech stack, create a repo, write code, or read the new-project guide — that is your step after ideation.
+
+Human-readable mirror of the file shape: [`templates/IDEA.md`](../templates/IDEA.md).
 
 To skip grilling and write from existing material, say explicitly: *skip grilling — write IDEA.md from what we have*.
 

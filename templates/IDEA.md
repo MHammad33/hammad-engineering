@@ -1,3 +1,5 @@
+<!-- Human-readable mirror of IDEA.md shape. Canonical source for the installed skill: skills/idea/SKILL.md § IDEA.md shape -->
+
 # Idea: <!-- working title -->
 
 One-line description of what this might be.
@@ -8,7 +10,7 @@ One-line description of what this might be.
 
 ## Motivation
 
-<!-- Why build this at all? Separate user benefit from builder motivation. -->
+<!-- User benefit and builder motivation — separate them. -->
 
 ## Problem
 
@@ -17,10 +19,6 @@ One-line description of what this might be.
 ## Users
 
 <!-- Primary user for v1. One person type. -->
-
-## Value
-
-<!-- What gets better for them? -->
 
 ## Product
 
@@ -36,7 +34,13 @@ One-line description of what this might be.
 
 ## Why this might work
 
-<!-- Why better than email, spreadsheets, competitors, or doing nothing? -->
+<!-- Why better than alternatives or doing nothing? -->
+
+## Alternatives
+
+<!-- What people do today instead. -->
+
+-
 
 ## Money
 
@@ -49,12 +53,6 @@ One-line description of what this might be.
 | Value ≥ price | <!-- how --> |
 | First revenue | <!-- rough range or N/A --> |
 
-## Alternatives
-
-<!-- What people do today instead. -->
-
--
-
 ## Smallest useful version (v1)
 
 <!-- Least we could build to learn or prove the idea. -->
@@ -63,19 +61,19 @@ One-line description of what this might be.
 
 ## Out of scope (v1)
 
-<!-- Explicit exclusions. Do not duplicate v1 bullets. -->
+<!-- Feature exclusions and product behavior limits (refusals, access limits). -->
 
 -
 
 ## Done when (seeds)
 
-<!-- 3–5 observable checks for v1 — enough to write PROJECT.md "Done when". -->
+<!-- 3–5 observable checks — enough to write PROJECT.md "Done when" later. -->
 
 -
 
 ## Kill criteria
 
-<!-- When we stop. Concrete conditions, not vibes. -->
+<!-- Concrete stop conditions, not vibes. -->
 
 -
 

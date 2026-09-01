@@ -13,7 +13,7 @@ Challenge an own-product idea and document enough clarity to decide whether to p
 
 - You have a rough idea and are not sure it is worth building
 - Before `PROJECT.md`, a repo, or any technical choices
-- You want motivation, user, value, and money questions answered honestly
+- You want motivation, user, money, and scope questions answered honestly
 
 ## When not to use
 
@@ -23,12 +23,26 @@ Challenge an own-product idea and document enough clarity to decide whether to p
 
 ## Steps
 
-1. Read the request, any linked brief, and scenario. State what is already clear vs missing (gap scan).
-2. Grill in chat using [Grill rules](#grill-rules). Follow [Writing rules](#writing-rules).
-3. Run the [Readiness checklist](#readiness-checklist). If items fail, ask more questions.
-4. Write `IDEA.md` using [`templates/IDEA.md`](../../templates/IDEA.md). No repeated facts across sections.
+1. Read the request, any linked brief, and scenario. Ask which scenario applies if unclear: **own product** or **learning / demo**. Default to own product when the user might sell it. State what is already clear vs missing (gap scan).
+2. Grill in chat using [Grill rules](#grill-rules). Follow [Writing rules](#writing-rules) and [Agent boundaries](#agent-boundaries).
+3. Run the [Readiness checklist](#readiness-checklist). If any row fails, ask more questions.
+4. Write `IDEA.md` in the human's working folder using [IDEA.md shape](#ideamd-shape). Apply Writing rules. Do not repeat facts across sections.
 5. End with **Decision:** pursue, pivot, or kill — and why.
-6. If **pursue**, tell the human the next step is `PROJECT.md` and which checklist items map directly to **Done when**.
+6. Give a short chat summary. If **pursue**, give the human-only handoff links below. Do not start `PROJECT.md` or read those URLs.
+
+## Agent boundaries
+
+These apply to **you** during ideation. They are not sections in `IDEA.md`.
+
+- Do not write `IDEA.md` on the first turn unless the human explicitly opts out of grilling.
+- Do not fetch or read Engineering Compass docs, templates, or handoff URLs — those links are for the human only.
+- Do not suggest stack, architecture, hosting, or implementation choices unless the human asks.
+- Do not run **design**, **plan**, or **build**.
+- Do not invent answers. Mark `[ASSUMPTION — confirm?]` in chat when the human has not confirmed.
+- Do not recommend **pursue** until the readiness checklist passes.
+- Do not write `PROJECT.md`, create a repo, or continue past ideation — the human handles the next stage.
+
+Product refusals, access limits, and safe-fallback behavior belong in **Out of scope (v1)** or **Done when (seeds)** in `IDEA.md`, not in this section.
 
 ## Writing rules
 
@@ -46,50 +60,51 @@ Apply to every chat reply during ideation and to the final `IDEA.md`.
 Your job is to extract answers from the human, not to silently invent them.
 
 1. **Gap scan first.** Before asking, list (briefly) what is already clear and what is missing.
-2. **Ask; do not assume** for: primary user, problem, v1 boundaries, out-of-scope, kill criteria, and money (own product). An attached brief may answer some — still confirm gaps in chat.
+2. **Ask; do not assume** for: scenario, motivation (user vs builder), primary user, problem, product, how it works, alternatives, v1, out-of-scope, done-when seeds, kill criteria, assumptions, and money (own product). An attached brief may answer some — still confirm gaps in chat.
 3. **Batch questions.** Ask **3–5 focused questions** per turn. Wait for answers before the next batch.
 4. **Push back** when you see:
    - vague user ("everyone", "businesses")
    - v1 scope creep (auth + admin + analytics in v1)
    - unbounded success ("works well", "reliable")
-   - missing kill criteria or untestable done-when
-   - builder motivation mixed into user value without separation
+   - missing kill criteria or untestable done-when seeds
+   - builder motivation mixed into user benefit without separation
 5. **Label assumptions.** If the human has not answered and you must proceed, mark `[ASSUMPTION — confirm?]` in chat — never present assumptions as facts.
-6. **No stack or architecture** unless the human asks. Defer to **design**.
-7. **Write `IDEA.md` only after** the readiness checklist passes or the human opts out of grilling.
+6. **Write `IDEA.md` only after** the readiness checklist passes or the human opts out of grilling.
 
-**Hard rule:** On the first turn, do **not** write `IDEA.md` unless the human explicitly says to skip grilling and write from what exists.
-
-Even with a full client brief, grill on items the brief typically leaves thin: **done-when examples**, **kill criteria**, **assumptions**, and **out-of-scope edges**.
+Even with a full client brief, grill on items the brief typically leaves thin: **done-when seeds**, **kill criteria**, **assumptions**, and **out-of-scope edges**.
 
 ## Readiness checklist
 
-Ideation is ready for `IDEA.md` and **pursue** only when these are answerable without hand-waving:
+Each row maps to one [IDEA.md](#ideamd-shape) section. Ideation is ready to write the file and recommend **pursue** only when every row passes.
 
-| # | Item | Ready when |
+| # | `IDEA.md` section | Ready when |
 | --- | --- | --- |
 | 1 | **Scenario** | own product or learning/demo stated |
-| 2 | **Primary user** | One concrete person type (not a category soup) |
+| 2 | **Motivation** | User benefit and builder motivation separated |
 | 3 | **Problem** | Specific pain, today, in plain language |
-| 4 | **Product** | One sentence — what it is |
-| 5 | **How it works** | 5–7 steps, no code |
-| 6 | **v1** | Bullet list of must-haves |
-| 7 | **Out of scope (v1)** | Explicit exclusions |
-| 8 | **Done when (seeds)** | 3–5 observable checks a future **test** skill could verify |
-| 9 | **Kill criteria** | Concrete stop conditions, not vibes |
-| 10 | **Assumptions** | Listed separately from confirmed facts |
-| 11 | **Money** | Answered (own product) or marked N/A (learning/demo) |
-| 12 | **Decision** | pursue / pivot / kill with reason |
+| 4 | **Users** | One concrete primary user (not a category soup) |
+| 5 | **Product** | One sentence — what it is |
+| 6 | **How it works** | 5–7 steps, no code |
+| 7 | **Why this might work** | Clear vs alternatives or doing nothing |
+| 8 | **Alternatives** | What people do today instead |
+| 9 | **Money** | Answered (own product) or marked N/A (learning/demo) |
+| 10 | **Smallest useful version (v1)** | Bullet list of must-haves |
+| 11 | **Out of scope (v1)** | Explicit feature exclusions; include product behavior limits here when relevant |
+| 12 | **Done when (seeds)** | 3–5 observable checks; include refusal or fallback cases when relevant |
+| 13 | **Kill criteria** | Concrete stop conditions, not vibes |
+| 14 | **Assumptions** | Listed separately from confirmed facts |
 
 If any row is weak, keep grilling — do not write `IDEA.md` or recommend **pursue**.
 
+After writing, add **Decision** with pursue, pivot, or kill and a reason.
+
 ## Ideation questions
 
-Answer these in `IDEA.md`. Tailor money questions for **learning / demo** (mark revenue as N/A).
+Use these to grill. Map answers into the matching `IDEA.md` section. Tailor money for **learning / demo** (mark N/A).
 
 **Why and who**
 
-1. Why build this?
+1. Why build this? (user benefit vs builder motivation)
 2. Who is the primary user?
 3. What problem do they have today?
 4. What changes for them if this exists?
@@ -99,42 +114,135 @@ Answer these in `IDEA.md`. Tailor money questions for **learning / demo** (mark 
 5. What exactly is the product? (one sentence)
 6. How does it work? (5–7 steps, no code)
 7. Why might this work better than what they use now?
+8. What do people do today instead? (alternatives)
+
+**Scope and proof**
+
+9. What is the smallest useful version (v1)?
+10. What is explicitly out of scope for v1?
+11. What are 3–5 observable checks for done? (done-when seeds)
+12. What would make us stop? (kill criteria)
+13. What are we assuming that is not confirmed?
 
 **Money (own product)**
 
-8. Will someone pay for this? (yes / no / unknown)
-9. Who pays, and for what?
-10. How do they get value worth the price?
-11. What is the smallest useful version (v1)?
-12. What would make us stop? (kill criteria)
+14. Will someone pay for this? (yes / no / unknown)
+15. Who pays, and for what?
+16. How do they get value worth the price?
 
-## Output
+## IDEA.md shape
 
-Write `IDEA.md` with all sections filled and a final line:
+Write this file in the human's working folder after the readiness checklist passes. Fill every section.
 
 ```markdown
+# Idea: <working title>
+
+One-line description of what this might be.
+
+## Scenario
+
+<!-- own product | learning / demo -->
+
+## Motivation
+
+<!-- User benefit and builder motivation — separate them. -->
+
+## Problem
+
+<!-- Who hurts, how, and how often? One or two sentences. -->
+
+## Users
+
+<!-- Primary user for v1. One person type. -->
+
+## Product
+
+<!-- What exactly is it? One sentence. -->
+
+## How it works
+
+<!-- 5–7 steps. User journey, no code. -->
+
+1.
+2.
+3.
+
+## Why this might work
+
+<!-- Why better than alternatives or doing nothing? -->
+
+## Alternatives
+
+<!-- What people do today instead. -->
+
+-
+
+## Money
+
+<!-- Own product: who pays, for what, evidence. Learning / demo: write N/A. -->
+
+| Question | Answer |
+| --- | --- |
+| Will someone pay? | yes / no / unknown |
+| Model | |
+| Value ≥ price | |
+| First revenue | |
+
+## Smallest useful version (v1)
+
+-
+
+## Out of scope (v1)
+
+<!-- Feature exclusions and product behavior limits (refusals, access limits). -->
+
+-
+
+## Done when (seeds)
+
+<!-- 3–5 observable checks — enough to write PROJECT.md "Done when" later. -->
+
+-
+
+## Kill criteria
+
+<!-- Concrete stop conditions. -->
+
+-
+
+## Assumptions
+
+<!-- Facts not confirmed by the human or brief. -->
+
+-
+
 ## Decision
 
 **pursue** | **pivot** | **kill**
 
-Reason: ...
+Reason:
 ```
 
-Deliver a short summary in chat and point to the next step:
+## Output
+
+When the readiness checklist passes:
+
+1. Write `IDEA.md` to the human's working folder using the shape above.
+2. Apply Writing rules. Do not fetch external docs or URLs.
+3. Deliver a short summary in chat with the decision.
+4. Tell the human what to do next — use the table below. Links are **for the human to open**, not for you to read.
 
 | Decision | Tell the human |
 | --- | --- |
-| **kill** | Stop. Do not open [new-project.md](../../docs/new-project.md). |
+| **kill** | Stop. No next step. |
 | **pivot** | Revise the idea and run **idea** again, or edit `IDEA.md` manually. |
-| **pursue** | Open [new-project.md](../../docs/new-project.md) and write `PROJECT.md` from `IDEA.md`. Map **Done when (seeds)** into `PROJECT.md` **Done when**. |
+| **pursue** | Review `IDEA.md`. When ready, open the [new project guide](https://github.com/MHammad33/hammad-engineering/blob/main/docs/new-project.md) and copy into the [PROJECT.md template](https://github.com/MHammad33/hammad-engineering/blob/main/templates/PROJECT.md). Map **Done when (seeds)** → **Done when**, **Out of scope (v1)** → **Out of scope**, **Smallest useful version (v1)** → **v1 scope**. |
 
 ## Stop when
 
 `IDEA.md` is written, the decision is stated, and the readiness checklist passed before writing.
 
-Do not run **design**, **plan**, or **build**. Do not suggest a tech stack unless the user explicitly asks.
-
-## Rules
+## Ideation rules
 
 - Separate user benefit from builder motivation.
 - If payment evidence is unknown, say so — pursuing to validate is OK with a tiny v1.
