@@ -2,6 +2,7 @@
 
 Use this page when you need a **skill name** or handoff. For the full workflow for a situation, open **Start here** on the [README](../README.md#start-here) instead:
 
+- [New idea](new-idea.md)
 - [New project](new-project.md)
 - [New feature](new-feature.md)
 - [Debugging](debugging.md)
@@ -19,7 +20,8 @@ Use the debug skill. The add button does nothing when clicked.
 
 | Situation | Start skill | Typical path |
 | --- | --- | --- |
-| I have a new idea | — | [new-project.md](new-project.md) |
+| I have a rough own-product idea | `idea` | [new-idea.md](new-idea.md) |
+| I have a validated idea (pursue) | — | [new-project.md](new-project.md) |
 | I am adding a feature | — | [new-feature.md](new-feature.md) |
 | I need to explore code first | `understand` | understand → design or build |
 | I need to design a feature | `design` | design → **approve** → plan or build |
@@ -37,6 +39,9 @@ Use the debug skill. The add button does nothing when clicked.
 
 | You just finished | Do this next |
 | --- | --- |
+| `idea` (pursue) | Write `PROJECT.md` → [new-project.md](new-project.md) |
+| `idea` (pivot) | Re-run **idea** or edit `IDEA.md` |
+| `idea` (kill) | Stop |
 | `understand` | **design** (choices exist) or **build** / **debug** (clear path) |
 | `design` | **Wait for your approval**, then **plan** or **build** |
 | `plan` | **build** task 1 → **test** |
@@ -62,10 +67,11 @@ Use the debug skill. The add button does nothing when clicked.
 
 ## How to use this in a real project
 
-1. **New project:** follow [new-project.md](new-project.md). Copy [templates/PROJECT.md](../templates/PROJECT.md) before creating the repo. Copy [templates/project-AGENTS.md](../templates/project-AGENTS.md) after.
-2. **Existing project:** pick a skill from the table above and run it in the project repo.
-3. **Project artifacts stay in the project:** `PROJECT.md`, `AGENTS.md`, `docs/<feature>/design.md`.
-4. **This repo stays portable:** principles here, project facts in each project.
+1. **New idea:** follow [new-idea.md](new-idea.md). Run **idea** → `IDEA.md` → pursue → [new-project.md](new-project.md).
+2. **New project:** copy [templates/PROJECT.md](../templates/PROJECT.md) before creating the repo. Copy [templates/project-AGENTS.md](../templates/project-AGENTS.md) after.
+3. **Existing project:** pick a skill from the table above and run it in the project repo.
+4. **Project artifacts stay in the project:** `IDEA.md` (local, pre-repo), `PROJECT.md`, `AGENTS.md`, `docs/<feature>/design.md`.
+5. **This repo stays portable:** principles here, project facts in each project.
 
 ---
 
