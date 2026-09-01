@@ -7,7 +7,7 @@ argument-hint: "<approved design path or feature name>"
 
 # Plan
 
-Break approved work into ordered tasks an agent can execute one at a time.
+Turn approved design into tasks a fresh **build** agent can execute using only what design already decided. Split by working result, not by file or layer.
 
 ## When to use
 
