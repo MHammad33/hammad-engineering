@@ -1,88 +1,98 @@
 ---
 name: idea
-description: "Challenge a vague own-product idea before any repo or code. Asks ideation questions, writes IDEA.md, and recommends pursue, pivot, or kill."
-user-invocable: true
+description: "Challenge a vague own-product idea before any repo or code. Grills on gaps, writes IDEA.md, and recommends pursue, pivot, or kill."
 argument-hint: "<your idea in one sentence, optional context>"
 ---
 
 # Idea
 
-Challenge an own-product idea and document enough clarity to decide whether to proceed.
+Challenge an own-product idea and document enough clarity to decide whether to build it.
 
-## When to use
+## Process
 
-- You have a rough idea and are not sure it is worth building
-- Before `PROJECT.md`, a repo, or any technical choices
-- You want motivation, user, value, and money questions answered honestly
+1. Read the request and any linked brief. Ask which scenario applies if unclear: own product, or learning/demo. Default to own product when the user might sell it. State what's already clear and what's missing.
+2. Grill for what's missing — three to five focused questions per turn, waiting for answers before the next batch. Push back on a vague user, v1 scope creep, unbounded success claims, missing kill criteria, or builder motivation dressed up as user benefit. Mark anything you must assume as `[ASSUMPTION — confirm?]` — never state it as fact.
+3. Keep going until every section below has a real, specific answer, not a placeholder. Then write `IDEA.md` in the human's working folder using the shape below.
+4. End with a **Decision**: pursue, pivot, or kill, and why.
+5. Give a short chat summary with the decision.
 
-## When not to use
-
-- Client work with signed scope — use the client path when available
-- You already have an approved `PROJECT.md` — use **design** or **build**
-- You are changing an existing codebase — use **understand** or **design**
-
-## Steps
-
-1. Read the request. Treat the argument as the idea unless a working title is given.
-2. Ask which scenario applies if unclear: **own product** or **learning / demo**. Default to own product when the user might sell it.
-3. Work through the ideation questions below. Recommend defaults when the user has not decided. Ask blocking questions only when the answer would change the recommendation.
-4. Write `IDEA.md` locally (or in a notes folder). Use [`templates/IDEA.md`](../../templates/IDEA.md) sections.
-5. End with an explicit **Decision:** pursue, pivot, or kill — and why.
-
-## Ideation questions
-
-Answer these in `IDEA.md`. Tailor money questions for **learning / demo** (mark revenue as N/A).
-
-**Why and who**
-
-1. Why build this?
-2. Who is the primary user?
-3. What problem do they have today?
-4. What changes for them if this exists?
-
-**What it is**
-
-5. What exactly is the product? (one sentence)
-6. How does it work? (5–7 steps, no code)
-7. Why might this work better than what they use now?
-
-**Money (own product)**
-
-8. Will someone pay for this? (yes / no / unknown)
-9. Who pays, and for what?
-10. How do they get value worth the price?
-11. What is the smallest useful version (v1)?
-12. What would make us stop? (kill criteria)
-
-## Output
-
-Write `IDEA.md` with all sections filled and a final line:
+## IDEA.md shape
 
 ```markdown
-## Decision
+# Idea: <working title>
 
+One-line description of what this might be.
+
+## Scenario
+<!-- own product | learning / demo -->
+
+## Motivation
+<!-- User benefit and builder motivation — separate them. -->
+
+## Problem
+<!-- Who hurts, how, and how often? One or two sentences. -->
+
+## Users
+<!-- Primary user for v1. One person type, not a category. -->
+
+## Product
+<!-- What exactly is it? One sentence. -->
+
+## How it works
+<!-- 5–7 steps. User journey, no code. -->
+
+## Why this might work
+<!-- Why better than alternatives or doing nothing? -->
+
+## Alternatives
+<!-- What people do today instead. -->
+
+## Money
+<!-- Own product: who pays, for what, evidence. Learning / demo: write N/A. -->
+
+| Question | Answer |
+| --- | --- |
+| Will someone pay? | yes / no / unknown |
+| Model | |
+| Value ≥ price | |
+| First revenue | |
+
+## Smallest useful version (v1)
+<!-- Least we could build to learn or prove the idea. -->
+
+## Out of scope (v1)
+<!-- Feature exclusions and product behavior limits — refusals, access limits. -->
+
+## Done when (seeds)
+<!-- 3–5 observable checks — enough to write PROJECT.md's "Done when" later. -->
+
+## Kill criteria
+<!-- Concrete stop conditions, not vibes. -->
+
+## Assumptions
+<!-- Facts not confirmed by the human or brief. -->
+
+## Decision
 **pursue** | **pivot** | **kill**
 
-Reason: ...
+Reason:
 ```
 
-Deliver a short summary in chat and point to the next step:
+## Boundaries
 
-| Decision | Tell the human |
-| --- | --- |
-| **kill** | Stop. Do not open [new-project.md](../../docs/new-project.md). |
-| **pivot** | Revise the idea and run **idea** again, or edit `IDEA.md` manually. |
-| **pursue** | Open [new-project.md](../../docs/new-project.md) and write `PROJECT.md` from `IDEA.md`. |
+- Client work with signed scope, an approved `PROJECT.md`, or an existing codebase — use the client path, **design**, or **understand** instead of this.
+- Don't write `IDEA.md` on the first turn unless the human explicitly opts out of grilling.
+- Don't fetch or read this repo's own docs, templates, or handoff links — those are for the human to open, not you.
+- Don't suggest a stack, architecture, or hosting choice unless asked.
+- Don't run **design**, **plan**, or **build**, or start `PROJECT.md` — the human handles the next stage.
+- Don't recommend **pursue** while any section is still thin or a placeholder.
+- A brief citation supports an answer — it doesn't prove it. Say "supported by," not "proven by."
+- Skip a user story by default. Add one only if **Motivation** and **Problem** don't already make the behavior clear.
 
-## Stop when
+## Return
 
-`IDEA.md` is written and the decision is stated.
+`IDEA.md`, and the decision in chat.
 
-Do not run **design**, **plan**, or **build**. Do not suggest a tech stack unless the user explicitly asks.
-
-## Rules
-
-- Separate user benefit from builder motivation.
-- If payment evidence is unknown, say so — pursuing to validate is OK with a tiny v1.
-- Prefer the smallest v1 that tests the idea.
-- Call out assumptions instead of hiding them.
+- **Kill** — stop, nothing else to do.
+- **Pivot** — revise the idea and run **idea** again, or edit `IDEA.md` by hand.
+- **Pursue** — tell the human to review `IDEA.md`, then open the [new project guide](https://github.com/MHammad33/hammad-engineering/blob/main/docs/new-project.md) and the [PROJECT.md template](https://github.com/MHammad33/hammad-engineering/blob/main/templates/PROJECT.md) themselves. Map **Done when (seeds)** → **Done when**, **Out of scope (v1)** → **Out of scope**, **Smallest useful version (v1)** → **v1 scope**.

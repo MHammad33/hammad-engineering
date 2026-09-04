@@ -64,6 +64,18 @@ A task is done when:
 
 ## Writing
 
-- Lead with the outcome or decision.
-- Use short sentences and concrete names: paths, commands, files.
-- Do not repeat README or skill instructions unless applying them to the current task.
+Applies to chat replies, reports, and anything meant to be read later — skill files included.
+
+- Use short sentences. Say one idea at a time.
+- Use everyday words. Skip jargon a plain word covers just as well.
+- Name the actor: "the build fails," not "the build is failed."
+- Don't over-explain what's already obvious from context.
+- Be concrete: paths, commands, file names, real numbers. Avoid filler, slogans, and vague claims — "robust," "seamless," "comprehensive," "future-proof" say nothing a reader can check.
+- Use the same word for the same thing throughout a document.
+- Skip anything time-sensitive that will quietly go stale.
+- Lead with the outcome or decision, then the detail that supports it.
+- Don't repeat a fact in two places. Point back to where it already lives instead.
+
+A skill file, task, or plan is read by a human deciding whether to act on it, then followed step by step by an agent. Front-load what the human needs in one read — the outcome, the decision, why it matters — and put agent-specific detail (exact commands, field names, edge cases) after that, not mixed into it.
+
+In chat, don't repeat README or skill instructions unless you're applying them to the current task.
