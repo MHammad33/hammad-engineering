@@ -1,7 +1,6 @@
 ---
 name: understand
-description: "Build an accurate picture of relevant code before changing anything. Use when starting a task, entering unfamiliar code, or before design."
-user-invocable: true
+description: "Build an accurate picture of relevant code before changing it. Use when starting a task in unfamiliar code, or before design on a non-trivial change."
 argument-hint: "<task, area, or question>"
 ---
 
@@ -9,49 +8,22 @@ argument-hint: "<task, area, or question>"
 
 Learn how the relevant part of the system works before proposing or changing it.
 
-## When to use
+## Process
 
-- Starting a task in unfamiliar code
-- Before **design** on a non-trivial change
-- When you need to know what files and patterns are involved
-
-## When not to use
-
-- The user pointed to an exact one-line change
-- You already explored this area in the current session and nothing changed
-
-## Steps
-
-1. Read the request and any linked files, errors, or docs (`PROJECT.md`, project `AGENTS.md`, existing designs).
-2. Read the relevant code paths. Trace behavior end to end when needed.
+1. Read the request and anything linked — files, errors, docs, `PROJECT.md`, project `AGENTS.md`, existing designs.
+2. Read the relevant code paths. Trace behavior end to end where it matters.
 3. Note existing patterns, conventions, and dependencies.
 4. List affected files and boundaries.
 5. State open questions that block safe work.
 
-## Output
+## Boundaries
 
-A short summary in chat:
+- Don't use this when the user already pointed to an exact one-line change — go straight to build.
+- Don't re-run this on ground already covered this session, if nothing's changed.
+- Don't write a file unless asked. This stays in chat.
 
-- What exists today and how it works
-- What is affected by the task
-- Relevant patterns to follow
-- Open questions (if any)
+## Return
 
-Do not write a file unless the user asks for one.
+A short chat summary: what exists today, what the task affects, patterns to follow, and open questions.
 
-## Stop when
-
-The summary is delivered and blocking questions are stated.
-
-## Human approval
-
-Not required unless you find major ambiguity or conflicting patterns. Ask before proceeding to **build**.
-
-## Next
-
-| Situation | Next skill |
-| --- | --- |
-| Non-trivial change with open choices | **design** |
-| Clear fix or small change | **build** or **debug** |
-| Unknown failure | **debug** |
-| Open questions block work | Ask the human |
+Open questions that block safe work — ask before continuing. Otherwise: a non-trivial change with open choices goes to **design**; a clear fix goes to **build** or **debug**; an unknown failure goes to **debug**.
