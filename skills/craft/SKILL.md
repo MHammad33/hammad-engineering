@@ -26,6 +26,8 @@ Only the frontmatter `description` (and `when_to_use`, if set) loads into contex
 ## Principles
 
 - **Be concise.** A skill's content, once loaded, stays in the conversation and survives compaction — but only up to 5,000 tokens per skill, shared across a 25,000-token budget for every skill used that session. A long skill isn't just harder to read. It's the first one dropped when a session runs long.
+- **Point to shared rules, don't restate them.** Sentence-level tone and style — short sentences, plain words, no filler, name the actor — lives once, in `AGENTS.md`'s Writing section. A skill's own prose should only say what's specific to that skill: its process, its output shape, its boundaries. If you find yourself writing a "Writing rules" section inside a skill, that content almost certainly belongs in `AGENTS.md` instead.
+- **Replace a vague claim with a checkable one.** Not "important" or "significant" — a number, a named scale, or an observable rule. The difference between `[severity] description` and a defined scale (say, three named priority levels plus a 0–5 confidence rating, each with a one-line meaning) is the difference between a vibe and something a reader can apply the same way twice.
 - **Match freedom to risk.** Loose, prose-style guidance when several approaches would work. An exact command, with no room to improvise, only when a wrong step is costly or hard to undo.
 - **Put the real trigger in the frontmatter.** State what the skill does and when, in third person, with the single most important case first — the listing truncates long descriptions, so don't bury the point. If `description` alone won't fit both what and when cleanly, use `when_to_use` for the rest.
 - **Know the other frontmatter levers, and use them on purpose:**
@@ -35,7 +37,7 @@ Only the frontmatter `description` (and `when_to_use`, if set) loads into contex
   - Don't set a field to its own default. `user-invocable: true` is already the default — writing it says nothing.
 - **Split what's only sometimes needed, keep what's always needed.** 500 lines is the ceiling for the main file. Move optional detail into a `references/` file, one link away from `SKILL.md` — never a link to a link — and give it a table of contents if it runs past 100 lines.
 - **For a long or fragile sequence, give a checklist the agent can copy and check off** (`- [ ] Step 1: ...`). None of the current nine skills do this. Worth adding to anything with more than five real steps — `idea` is the obvious candidate, since it runs over several turns.
-- **If output quality depends on a check, say the loop out loud:** do the thing, validate it, fix what's wrong, repeat, don't move on until it passes.
+- **If output quality depends on a check, name it and say the loop out loud.** A programmatic check: do the thing, validate it, fix what's wrong, repeat, don't move on until it passes. A prose check: name the actual re-read pass — "can a human get the point in one read," "can a fresh agent execute this without asking a product question" — not just "reread before finishing."
 - **Skip anything time-sensitive.** No fact that will quietly go stale.
 - **Write two or three real test prompts before calling a skill finished.** You don't have to run a full eval. The cheap first check: turn the skill off with `skillOverrides` in settings, run the same prompt with it on and off, and compare. That alone often shows whether the skill is solving a real problem.
 
@@ -52,43 +54,11 @@ Anthropic's docs require almost nothing: a name, a description, a body that gets
 | Human approval | Ties to `AGENTS.md`'s approval gates; also worth asking here whether the skill should set `disable-model-invocation` instead of relying on a human to remember to check | Yes, as long as `AGENTS.md` still works this way |
 | Next | The literal handoff — where this skill sends you | Yes — no table, no pipeline |
 
-```markdown
----
-name: <one lowercase word, no reserved words>
-description: "<what it does, third person, key case first><when, and when not, if a sibling could be mistaken for it>"
-argument-hint: "<what to pass in>"
----
-
-# <Title>
-
-<one or two sentences: what this leaves you with when it's done>
-
-## When to use
-
-## When not to use
-<!-- name the sibling to use instead -->
-
-## Steps
-<!-- freedom level per step, per Principles above -->
-
-## Output
-<!-- only if the output has a real shape -->
-
-## Stop when
-<!-- what this skill does NOT do -->
-
-## Human approval
-<!-- required, optional, or not required, and when -->
-
-## Next
-<!-- table: situation -> next skill -->
-```
-
-Depart from this when a skill genuinely needs to — `design`'s document-sections block, `plan`'s dependency-ordering rules. If you depart, say why in your summary instead of quietly dropping a section.
+Use the table's rows, in that order, as your section skeleton — `When to use` through `Next`, `Output` only if there's a real shape to show. Depart from it when a skill genuinely needs to — `design`'s document-sections block, `plan`'s dependency-ordering rules. If you depart, say why in your summary instead of quietly dropping a section.
 
 ## Steps
 
-1. Read the target skill (if editing) and one sibling of similar size, so you're calibrated. Writing new, skim two or three siblings first.
+1. Read the target skill (if editing) and one sibling of similar size, so you're calibrated. Writing new, skim two or three siblings first. Read `AGENTS.md`'s Writing section too — that's where sentence-level tone rules live, so the skill body doesn't need to restate them.
 2. New skill or edit? New: check the name against reserved words, and check its `When to use`/`When not to use` against every sibling — two skills should never plausibly claim the same task. Edit: be clear on what's changing and why, and don't fold in unrelated cleanup.
 3. Pick the frontmatter deliberately — description and, if needed, `when_to_use`, plus whether `disable-model-invocation`, `context: fork`, or `allowed-tools` apply. Don't just copy the block from a sibling unchanged.
 4. Draft or edit the body using This repo's shape.
@@ -103,7 +73,9 @@ Depart from this when a skill genuinely needs to — `design`'s document-section
 - [ ] Name: one lowercase word, not a reserved word, doesn't overlap a sibling's job
 - [ ] No frontmatter field set to its own default
 - [ ] `disable-model-invocation`, `context: fork`, and `allowed-tools` were each considered, not just skipped by default
-- [ ] Body under 500 lines; anything only sometimes needed lives in `references/`, one link away, with a table of contents past 100 lines
+- [ ] Body under 500 lines; `references/` used correctly if it isn't
+- [ ] No generic tone/style rule restated here that already lives in `AGENTS.md`'s Writing section
+- [ ] Vague or unquantified claims replaced with a concrete rule, scale, or example where one exists
 - [ ] Each step's looseness matches how risky or reversible it actually is
 - [ ] No fact stated in two places — link to it instead
 - [ ] Examples, if any, are concrete input/output pairs, not abstract description
